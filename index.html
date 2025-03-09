@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="Rhythm" />
+  <meta property="og:description"
+    content="A vertical scrolling rhythm game where you have to hit the notes falling down, which will appear according to the music." />
+  <meta property="og:url" content="https://chloeliang.github.io/rhythm-game/" />
+  <meta property="og:image" content="https://res.cloudinary.com/nliangxin/image/upload/v1543036731/rhythm.png" />
+  <link rel="shortcut icon" type="image/png"
+    href="https://assets.myket.ir/icons/xlarge/335fb812-99f4-41eb-880b-7db4b03236ef.png" />
+  <!-- <link
+    href="Docallismeonstreet/DOCALLISMEONSTREET.ttf"
+    rel="preload"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+    /> ??? -->
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Game</title>
+</head>
+
+<body>
+  <audio class="song" src="media/gravity.mp3"></audio>
+
+  <main>
+    <div class="game">
+
+      <div class="hit">
+        <div class="hit__combo"></div>
+        <div class="hit__accuracy"></div>
+      </div>
+
+      <div class="track-container"></div>
+
+      <div class="key-container">
+        <div class="key key--s key--blue Left">
+          <div class="keypress keypress--blue"></div>
+        </div>
+        <div class="key key--d key--red Up">
+          <div class="keypress keypress--red"></div>
+        </div>
+        <div class="key key--j key--blue Down">
+          <div class="keypress keypress--blue"></div>
+
+        </div>
+        <div class="key key--k key--red Right">
+          <div class="keypress keypress--red"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Pesonagem">
+      <script src="scripts/teclas1.js"></script>
+      <img src="imagens/personagens.png" class="imagem" id="imagemResultado">
+      <img id="imagemI" class="imagem" src="imagens/Esquerda.png" alt="Imagem I">
+      <img id="imagemA" class="imagem" src="imagens/Cima.png" alt="Imagem A">
+      <img id="imagemS" class="imagem" src="imagens/Baixo.png" alt="Imagem S">
+      <img id="imagemB" class="imagem" src="imagens/Direita.png" alt="Imagem B">
+      <img id="imagemD" class="imagem" src="imagens/imageD.gif" alt="Imagem D">
+    </div>
+    <div class="menu">
+
+      <div class="menu__song">
+        <div class="princ">
+          <h2>Gravity Falls</h2>
+          <div>
+            <p class="prof">Volta as aulas</p>
+          </div>
+          <p>
+            <a class="author" target="__blank" href="http://www.theishter.com/" :>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="menu__config">
+        <div class="config__speed">
+          <div>
+            <a class="btn btn--small btn--selected" href="#">1x</a>
+            <a class="btn btn--small" href="#">2x</a>
+            <a class="btn btn--small" href="#">3x</a>
+          </div>
+        </div>
+        <div class="config__challenge">
+          <div><a class="btn btn--small" href="#">Fade</a></div>
+        </div>
+      </div>
+
+      <div class="menu_start">
+        <a class="btn btn--primary btn--start" href="#">Start</a>
+      </div>
+
+    </div>
+
+    <div class="summary">
+      <div class="summary__timer"></div>
+      <div class="summary__result">
+        <h2 class="result__heading">Clear</h2>
+        <div class="result__accuracy perfect">
+          <p class="accuracy__heading">SICK</p>
+          <span>:</span>
+          <p class="accuracy__count perfect__count">SICK</p>
+        </div>
+        <div class="result__accuracy good">
+          <p class="accuracy__heading">Good</p>
+          <span>:</span>
+          <p class="accuracy__count good__count"></p>
+        </div>
+        <div class="result__accuracy bad">
+          <p class="accuracy__heading">Bad</p>
+          <span>:</span>
+          <p class="accuracy__count bad__count"></p>
+        </div>
+        <div class="result__accuracy miss">
+          <p class="accuracy__heading">Miss</p>
+          <span>:</span>
+          <p class="accuracy__count miss__count"></p>
+        </div>
+        <div class="result__accuracy combo">
+          <p class="accuracy__heading">Max Combo</p>
+          <span>:</span>
+          <p class="accuracy__count combo__count"></p>
+        </div>
+        <div class="result__accuracy score">
+          <p class="accuracy__heading">Score</p>
+          <span>:</span>
+          <p class="accuracy__count score__count"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="scripts/song.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
